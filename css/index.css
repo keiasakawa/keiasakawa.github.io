@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0px;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+}
+
+.custom-container {
+    position: relative;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    overflow:hidden;
+}
+
+.profilepic {
+    margin-right: 10%;
+}
+
+.profilepic img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    float: right;
+}
+
+.personaldescription {
+    margin: auto;
+    text-align: left;
+}
+
+.personaldescription h1{
+    font-size: 3em;
+}
+
+.personaldescription p{
+    font-size: 2em;
+}
+
+.text-container .text-box{
+    position: relative;
+    background: #00c2cb;
+  }
+
+@media screen and (max-width: 991px) {
+    .profilepic {
+        margin-bottom: 10%;
+        padding-top:10%;
+    }
+}
+
+.reveal{
+    position: relative;
+    height: 100vh;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
