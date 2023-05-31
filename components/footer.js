@@ -6,6 +6,12 @@ class Footer extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <style>
+            .footer {
+                position: sticky;
+                bottom: 0px;
+                z-index: 1;
+            }
+
                 .footer nav {
                 height: 50px;
                 display: flex;

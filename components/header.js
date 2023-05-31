@@ -6,6 +6,12 @@ class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
             <style>
+            .header {
+                position: sticky;
+                top: 0px;
+                z-index: 1;
+            }
+
                 .header nav {
                 height: 50px;
                 display: flex;

@@ -9,12 +9,25 @@ body {
     font-family: 'Merriweather', serif;
 }
 
-.custom-container {
+.about-me {
+    height: calc(100vh - 100px);
+    width: 100%;
+    margin: 0;
+    background-image: linear-gradient(to bottom, #76BA99 75%, #ADCF9F);
+}
+
+.content-container {
     position: relative;
-    height: 100vh;
+    height: 100%;
     display:flex;
     align-items: center;
     overflow:hidden;
+    color: #FFDCAE;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content-container h1{
+    font-weight: bold;
 }
 
 .profilepic {
@@ -41,11 +54,6 @@ body {
     font-size: 2em;
 }
 
-.text-container .text-box{
-    position: relative;
-    background: #00c2cb;
-  }
-
 @media screen and (max-width: 991px) {
     .profilepic {
         margin-bottom: 10%;
@@ -53,15 +61,28 @@ body {
     }
 }
 
+.projects {
+    position: relative;
+    height: calc(100vh - 100px);
+    width: 100%;
+    background-color: #ADCF9F;
+    background-image: linear-gradient(to bottom,#ADCF9F 50%, #CED89E);
+}
 .reveal{
     position: relative;
-    height: 100vh;
-    transform: translateY(150px);
+    transform: translateY(100px);
     opacity: 0;
     transition: 1s all ease;
+    overflow:hidden;
+    align-items: center;
+    padding-top: 5%;
   }
 
   .reveal.active{
     transform: translateY(0);
     opacity: 1;
   }
+
+.title {
+
+}
