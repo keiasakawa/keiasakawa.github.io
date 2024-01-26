@@ -25,7 +25,7 @@ class Header extends HTMLElement {
                 margin-bottom: 0;
             }
             
-            .header a {
+            .header .middle {
                 font-weight: 700;
                 margin: 0 25px;
                 color: #fff;
@@ -33,7 +33,7 @@ class Header extends HTMLElement {
                 border-radius: 10%;
             }
 
-            .header a:hover {
+            .header .middle:hover {
                 padding-bottom: 5px;
                 box-shadow: inset 0 -2px 0 0 #fff;
             }
@@ -48,13 +48,36 @@ class Header extends HTMLElement {
                 width: 100%;
             }
 
+            .header .linkedin img {
+                height: 40px;
+                width: 40px;
+            }
+
+            .header img {
+                position: relative;
+                top: 15%;
+                height: 30px;
+                width: 30px;
+                margin: 0 25px;
+            }
+
+            .header .right {
+                position:absolute;
+                right: 0;
+            }
+
+
             </style>
             <header class="header">
             <nav>
                 <ul>
-                    <li><div><a href="index.html">About</a></div></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="resume.html">Resume</a></li>
+                    <li><div><a class="middle" href="index.html">About</a></div></li>
+                    <li><a class="middle" href="resume.html">Resume</a></li>
+                </ul>
+                <ul class="right">
+                    <li><a class="linkedin" href="https://www.linkedin.com/in/kei-asakawa/"><img src="images/linkedin.png" alt=linkedin></a></li>
+                    <li><a class="github" href="https://github.com/keiasakawa"><img src="images/github.png" alt=github></a></li>
+                
                 </ul>
             </nav>
             </header>

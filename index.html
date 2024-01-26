@@ -15,38 +15,175 @@ EMAIL: kasakawa@uci.edu
   <!-- you would also link to Bootstrap here! -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/index.css">
-  <script src="index.js" defer></script>
   <script src="components/header.js" defer></script>
   <script src="components/footer.js" defer></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" href="css/index.css">
+  <script>
+    $(window).on("resize", function () {
+      $(".youtube").css("height", $(".youtube").width() / 2 );
+      $(".youtube2").css("height", $(".youtube2").width() / 2 );
+      $(".about-me").css("height", $(".custom-row").height() + $("body").height() * .25)
+    
+  })
+    ;
+
+    $(function () {
+    $(".youtube").css("height", $(".youtube").width() / 2 );
+    $(".youtube2").css("height", $(".youtube2").width() / 2 );
+    $(".movie-footer").css("margin-top", ($(".project-title").height() + $(".project-explain").height() + $(".project-footer").height()) * .1)
+    $(".about-me").css("height", $(".custom-row").height() + $("body").height() * .25)
+
+    const heading = document.querySelector(".name");
+    const text = "Hi! I'm Kei Asakawa."
+
+    function textTyping(element, text, i=0){
+      element.innerHTML += text[i]
+      if (i === text.length - 1) {
+        return;
+      }
+
+      setTimeout(() => textTyping(element, text, i + 1), 100)
+    }
+
+    textTyping(heading, text)
+    });
+
+
+    
+
+  </script>
   <title>Kei Asakawa's Portfolio</title>
 </head>
 
 <body>
   <header-component></header-component>
-  <div class="about-me">
-    <div class="container content-container">
-      <div class="row custom-row">
-        <div class="col-md-5 profilepic">
-          <img src="images/keiasakawa.jpg" alt="keiasakawa">
-        </div>
+  <div class="container middle">
+    <div class="about-me">
+      <div class="container content-container">
+        <div class="row custom-row">
+          <div class="col-md-5 profilepic align-self-center">
+            <img src="images/keiasakawa.jpg" alt="keiasakawa">
+          </div>
 
-        <div class="col-md-5 personaldescription">
-          <h1>Hi! I'm Kei Asakawa.</h1>
-          <br>
-          <p>I'm a 4th year computer science major attending the University of California, Irvine.</p>
+          <div class="col-md-5 personaldescription">
+            <h1 class="name"></h1>
+            <br>
+            <p>Aspiring Developer.</p>
+            <p>Recent UCI Grad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="projects">
+      <div class="container reveal">
+        <div class="title">
+          <h1>Projects</h1>
+        </div>
+        <div class="container project">
+          <div class="row justify-content-center project-title">
+            <div class="col-md-6">
+              <h2>Movie Database Web Application</h2>
+            </div>
+          </div>
+          <div class="row justify-content-center project-explain">
+            <div class="col-md-7">
+            <p>
+            Customers can login to their accounts, which utilizes Google's reCAPTCHA service, in order to access information on a wide variety of movies that the user can add to cart to checkout. Movie information such as title, year, director, and stars are included with a price being associated with each movie.
+            </p>
+            <p>
+            Utilized: Java, AWS EC2, HTML, Javascript, MySQL, Android Development, Apache Tomcat
+            </p>
+            </div>
+          </div>
+          <div class="row justify-content-center align-items-end project-footer movie-footer">
+            <div class="col justify-content-center">
+              <div class="flex">
+                <p>Frontend</p>
+                <a class="first" href="https://github.com/keiasakawa/health-plus-frontend"><img height="30px" src="images/black.png"></a> 
+                <p>Backend</p>
+                <a href="https://github.com/maannddyy/health-plus-backend"><img height="30px"  src="images/black.png"></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Web Demo</h3>
+            <iframe class="youtube" width="100%" src="https://www.youtube.com/embed/NBH9CWpZkh0?si=Uyr73KP4Jf1oCgga" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="col-md-6">
+              <h3>Web + App Demo</h3>
+              <iframe class="youtube" width="100%" src="https://www.youtube.com/embed/4_Pv6ZldYn0?si=pj1Vqn3xskiT_nXd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="container project">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="container h-100">
+                <div class="row justify-content-center project-explain">
+                  <div class="col">
+                    <h2>Weight Loss App</h2>
+                      <p>
+                        Customers can login/create their accounts and access recipes/meals that were webscraped from <a color="black" href=https://www.allrecipes.com>allrecipes.com</a>. Recipes can be searched up or are recommended based on information provided by the HealthKitAPI. 
+                      </p>
+                      <p>
+                        Utilized: Typescript, HTML, CSS, Ionic, React. Javascript, Python
+                      </p>
+                  </div>
+                </div>
+                <div class="row justify-content-center align-items-center project-footer">
+                  <div class="col">
+                    <div class="flex">
+                        <p class="github-text">Frontend</p>
+                        <a class="first" href="https://github.com/keiasakawa/health-plus-frontend"><img height="30px" src="images/black.png"></a> 
+                      <p>Backend</p>
+                      <a href="https://github.com/maannddyy/health-plus-backend"><img height="30px"  src="images/black.png"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 align-self-center">
+              <iframe class="youtube2" width="100%" src="https://www.youtube.com/embed/SGI16AM6jjY?si=HeydqhWvdLHAJkJe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+          </div>
+        </div>
+        <div class="container project">
+          <div class="row">
+            <div class="col-md-8 align-self-center">
+            <img class="youtube3" width="100%" src="images/rmj.jpg"></img>
+            </div>
+            <div class="col-md-4">
+              <div class="container h-100">
+                <div class="row justify-content-center project-explain">
+                  <h2>RateMyJungler &#40Work in Progress&#41</h2>
+                  <p>
+                    A review site, which allows anyone to assign ratings to League of Legends players. Using the Riot API, players can be searched up by username and information such as level, rank, and win/loss record are displayed.
+                    </p>
+                    <p>
+                      Utilized: Javascript, HTML, CSS, MongoDB, Docker, React, RiotAPI
+                    </p>
+                </div>
+                <div class="row justify-content-center project-footer">
+                  <div class="col">
+                    <div class="flex">
+                        <p>Frontend</p>
+                        <a class="first" href="https://github.com/keiasakawa/RateMyJungler"><img height="30px" src="images/black.png"></a> 
+                      <p>Backend</p>
+                      <a href="https://github.com/keiasakawa/RateMyJunglerBackend"><img height="30px"  src="images/black.png"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="projects">
-    <div class="container reveal">
-      <div class="title">
-        <h1>Projects</h1>
-      </div>
-    </div>
-  </div>
-  <footer-component></footer-component>
 </body>
 
 </html>

@@ -6,23 +6,22 @@
 body {
     margin: 0px;
     text-align: center;
-    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 .about-me {
-    height: calc(100vh - 100px);
     width: 100%;
-    margin: 0;
-    background-image: linear-gradient(to bottom, #76BA99 75%, #ADCF9F);
+    background-image: linear-gradient(to bottom, #0F1035 75%, #365486);
 }
 
 .content-container {
     position: relative;
-    height: 100%;
     display:flex;
     align-items: center;
+    justify-content: center;
     overflow:hidden;
-    color: #FFDCAE;
+    color: #DCF2F1;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -30,14 +29,49 @@ body {
     font-weight: bold;
 }
 
+.custom-row {
+    margin-top: 20%;
+}
+
+.first {
+    margin-right: 5%;
+}
+
+.flex {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.flex p{
+    margin: auto 2%;
+}
+
+
+.middle {
+    height: 100%;
+    max-width: 100%;
+    padding: 0;
+}
+
+h1, h2, h3, p {
+    font-weight: 700;
+    color: #DCF2F1
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
 .profilepic {
-    margin-right: 10%;
+    justify-content: center;
 }
 
 .profilepic img{
-    height: 100%;
     width: 100%;
     border-radius: 50%;
+    align-self: center;
+    margin:auto;
     float: right;
 }
 
@@ -47,7 +81,7 @@ body {
 }
 
 .personaldescription h1{
-    font-size: 3em;
+    font-size: 4em;
 }
 
 .personaldescription p{
@@ -57,17 +91,29 @@ body {
 @media screen and (max-width: 991px) {
     .profilepic {
         margin-bottom: 10%;
-        padding-top:10%;
+        margin-right: 0%;
     }
+
+}
+
+.project-footer{
+    margin-top: 10%;
 }
 
 .projects {
     position: relative;
-    height: calc(100vh - 100px);
     width: 100%;
-    background-color: #ADCF9F;
-    background-image: linear-gradient(to bottom,#ADCF9F 50%, #CED89E);
+    background-color: #365486;
 }
+
+.project {
+    margin-bottom: 100px;
+}
+
+.movie-footer {
+    margin-bottom: 5%;
+}
+
 .reveal{
     position: relative;
     transform: translateY(100px);
@@ -76,6 +122,7 @@ body {
     overflow:hidden;
     align-items: center;
     padding-top: 5%;
+    max-width: 100%;
   }
 
   .reveal.active{
@@ -83,6 +130,6 @@ body {
     opacity: 1;
   }
 
-.title {
-
-}
+  .title {
+    margin-bottom: 3%;
+  }
