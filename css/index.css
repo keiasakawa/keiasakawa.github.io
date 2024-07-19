@@ -5,7 +5,7 @@
 
 body {
     margin: 0px;
-    text-align: center;
+    /* text-align: center; */
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
@@ -33,14 +33,18 @@ body {
     margin-top: 20%;
 }
 
-.first {
-    margin-right: 5%;
-}
-
 .flex {
     display: flex;
     align-items:center;
     justify-content: center;
+    gap: 5px;
+}
+
+.flexbox{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 5%;
 }
 
 .flex p{
@@ -107,11 +111,11 @@ h2 {
 }
 
 .project {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 }
 
 .movie-footer {
-    margin-bottom: 5%;
+    margin-bottom: 2%;
 }
 
 .reveal{
@@ -132,4 +136,5 @@ h2 {
 
   .title {
     margin-bottom: 3%;
+    text-align: center;
   }
