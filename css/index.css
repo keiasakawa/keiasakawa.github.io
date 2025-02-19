@@ -6,13 +6,22 @@
 body {
     margin: 0px;
     /* text-align: center; */
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
 }
 
 .about-me {
     width: 100%;
     background-image: linear-gradient(to bottom, #0F1035 75%, #365486);
+    height: calc(100vh + 500px);
+}
+
+.center-content {
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .content-container {
@@ -22,7 +31,8 @@ body {
     justify-content: center;
     overflow:hidden;
     color: #DCF2F1;
-    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding-top: auto;
 }
 
 .content-container h1{
@@ -30,7 +40,6 @@ body {
 }
 
 .custom-row {
-    margin-top: 20%;
 }
 
 .flex {
@@ -63,6 +72,10 @@ h1, h2, h3, p {
     color: #DCF2F1
 }
 
+h1 {
+    font-size: 5rem;
+}
+
 h2 {
     font-size: 2.5rem;
 }
@@ -72,6 +85,7 @@ h2 {
 }
 
 .profilepic img{
+    display:flex;
     width: 100%;
     border-radius: 50%;
     align-self: center;
@@ -97,7 +111,14 @@ h2 {
         margin-bottom: 10%;
         margin-right: 0%;
     }
+    
+    .center-content {
+        height: auto;
+    }
 
+    .content-container{
+        margin-top:10%;
+    }
 }
 
 .project-footer{
