@@ -1,161 +1,166 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 0px;
-    /* text-align: center; */
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+  margin: 0px;
+  /* text-align: center; */
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
 }
 
 .about-me {
-    width: 100%;
-    background-image: linear-gradient(to bottom, #0F1035 75%, #365486);
-    height: calc(100vh + 500px);
+  width: 100%;
+  background-image: linear-gradient(to bottom, #0f1035 75%, #365486);
+  height: calc(100vh + 500px);
 }
 
 .center-content {
-    height: calc(100vh - 50px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+  height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content-container {
-    position: relative;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    overflow:hidden;
-    color: #DCF2F1;
-    width: 100%;
-    padding-top: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #dcf2f1;
+  width: 100%;
+  padding-top: auto;
 }
 
-.content-container h1{
-    font-weight: bold;
+.content-container h1 {
+  font-weight: bold;
 }
 
 .custom-row {
 }
 
 .flex {
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
-.flexbox{
-    display: flex;
-    align-items:center;
-    justify-content: center;
-    gap: 5%;
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
 }
 
-.flex p{
-    margin: auto 2%;
+.flex p {
+  margin: auto 2%;
 }
-
 
 .middle {
-    height: 100%;
-    max-width: 100%;
-    padding: 0;
+  height: 100%;
+  max-width: 100%;
+  padding: 0;
 }
 
-h1, h2, h3, p {
-    font-weight: 700;
-    color: #DCF2F1
+h1,
+h2,
+h3,
+p {
+  font-weight: 700;
+  color: #dcf2f1;
 }
 
 h1 {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 h2 {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .profilepic {
-    justify-content: center;
+  justify-content: center;
 }
 
-.profilepic img{
-    display:flex;
-    width: 100%;
-    border-radius: 50%;
-    align-self: center;
-    margin:auto;
-    float: right;
+.profilepic img {
+  display: flex;
+  width: 100%;
+  border-radius: 50%;
+  align-self: center;
+  margin: auto;
+  float: right;
 }
 
 .personaldescription {
-    margin: auto;
-    text-align: left;
+  margin: auto;
+  text-align: left;
 }
 
-.personaldescription h1{
-    font-size: 4em;
+.personaldescription h1 {
+  font-size: 4em;
 }
 
-.personaldescription p{
-    font-size: 2em;
+.personaldescription p {
+  font-size: 2em;
 }
 
 @media screen and (max-width: 991px) {
-    .profilepic {
-        margin-bottom: 10%;
-        margin-right: 0%;
-    }
-    
-    .center-content {
-        height: auto;
-    }
+  .profilepic {
+    margin-bottom: 10%;
+    margin-right: 0%;
+  }
 
-    .content-container{
-        margin-top:10%;
-    }
+  .center-content {
+    height: auto;
+  }
+
+  .content-container {
+    margin-top: 10%;
+  }
+
+  .custom-row {
+    flex-direction: column;
+  }
 }
 
-.project-footer{
-    margin-top: 10%;
+.project-footer {
+  margin-top: 10%;
 }
 
 .projects {
-    position: relative;
-    width: 100%;
-    background-color: #365486;
+  position: relative;
+  width: 100%;
+  background-color: #365486;
 }
 
 .project {
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .movie-footer {
-    margin-bottom: 2%;
+  margin-bottom: 2%;
 }
 
-.reveal{
-    position: relative;
-    transform: translateY(100px);
-    opacity: 0;
-    transition: 1s all ease;
-    overflow:hidden;
-    align-items: center;
-    padding-top: 5%;
-    max-width: 100%;
-  }
+.reveal {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 1s all ease;
+  overflow: hidden;
+  align-items: center;
+  padding-top: 5%;
+  max-width: 100%;
+}
 
-  .reveal.active{
-    transform: translateY(0);
-    opacity: 1;
-  }
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
 
-  .title {
-    margin-bottom: 3%;
-    text-align: center;
-  }
+.title {
+  margin-bottom: 3%;
+  text-align: center;
+}
